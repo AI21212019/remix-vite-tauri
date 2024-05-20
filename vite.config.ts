@@ -1,11 +1,11 @@
 import UnoCSS from '@unocss/vite';
 // import React from '@vitejs/plugin-react'
 import { vitePlugin as remix } from "@remix-run/dev";
-// import { installGlobals } from "@remix-run/node";
+import { installGlobals } from "@remix-run/node";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-// installGlobals();
+installGlobals();
 
 export default defineConfig(async () =>({
   plugins: [
@@ -13,11 +13,11 @@ export default defineConfig(async () =>({
       ssr: false,
     }),
     tsconfigPaths(),
-    UnoCSS(),
+    UnoCSS({
+      transformCSS: "post",
+
+    }),
     // React(),
-    // remix({
-    //   ssr: false,
-    // }),
   ],
   // 1. prevent vite from obscuring rust errors
   clearScreen: false,

@@ -7,7 +7,8 @@ import {
 } from "@remix-run/react";
 
 import '@unocss/reset/normalize.css';
-import './uno.postcss'
+import './uno.postcss';
+
 
 
 

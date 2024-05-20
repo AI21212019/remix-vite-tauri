@@ -1,6 +1,8 @@
 import type { MetaFunction} from "@remix-run/node";
 
 
+
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix SPA" },
@@ -10,6 +12,18 @@ export const meta: MetaFunction = () => {
 
 
 export default function Index() {
+
+
+   const isDark = localStorage && localStorage.getItem('theme') === 'dark';
+    applyTheme(isDark);
+
+
+  function applyTheme(isDark: boolean) {
+		const html = document.querySelector('html');
+		isDark ? html?.classList.add('dark') : html?.classList.remove('dark');
+		localStorage && localStorage.setItem('theme', isDark ? 'dark' : '');
+	}
+
   return (
     // <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
 <div className="bg-red-500 py-6 text-center dark:bg-primary">
