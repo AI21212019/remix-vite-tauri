@@ -6,6 +6,11 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import '@unocss/reset/normalize.css';
+import './uno.postcss'
+
+
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

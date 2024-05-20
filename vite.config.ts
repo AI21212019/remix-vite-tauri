@@ -1,14 +1,31 @@
-import { vitePlugin as remix } from "@remix-run/dev";
 import UnoCSS from '@unocss/vite';
+import React from '@vitejs/plugin-react'
+import { vitePlugin as remix } from "@remix-run/dev";
+// import { installGlobals } from "@remix-run/node";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig({
+// installGlobals();
+
+export default defineConfig(async () =>({
   plugins: [
-    UnoCSS(),
-    remix({
-      ssr: false,
-    }),
+    remix(),
     tsconfigPaths(),
+    UnoCSS(),
+    React(),
+    // remix({
+    //   ssr: false,
+    // }),
   ],
-});
+  // 1. prevent vite from obscuring rust errors
+  clearScreen: false,
+  // 2. tauri expects a fixed port, fail if that port is not available
+  // server: {
+  //   port: 5173,
+  //   strictPort: true,
+  //   watch: {
+  //     // 3. tell vite to ignore watching `src-tauri`
+  //     ignored: ["**/src-tauri/**"],
+  //   },
+  // },
+}));

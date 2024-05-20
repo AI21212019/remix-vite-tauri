@@ -1,4 +1,5 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction} from "@remix-run/node";
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,10 +8,12 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix (SPA Mode)</h1>
+    // <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+<div className="bg-red-500 py-6 text-center dark:bg-primary">
+      <h1 className="color-white text-4xl font-sans">Welcome to Remix (SPA Mode)</h1>
       <ul>
         <li>
           <a
@@ -30,3 +33,17 @@ export default function Index() {
     </div>
   );
 }
+
+// export const links: LinksFunction = () => {
+  
+  //   return [
+  //     // {
+  //     //   rel: 'stylesheet',
+  //     //   href: 'uno.css',
+  //     // },
+  //     {
+  //       rel: 'stylesheet',
+  //       href: reset,
+  //     },
+  //   ]
+  // }
