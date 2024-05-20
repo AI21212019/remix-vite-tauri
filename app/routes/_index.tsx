@@ -1,5 +1,6 @@
 import type { MetaFunction} from "@remix-run/node";
-
+import {invoke} from '@tauri-apps/api/core';
+// import {json, LoaderFunction} from "@remix-run/node";
 
 
 
@@ -24,6 +25,12 @@ export default function Index() {
 		localStorage && localStorage.setItem('theme', isDark ? 'dark' : '');
 	}
 
+   const getInvoke = async () => {
+    const response = await invoke('say_hello');
+    console.log(response);
+  };
+
+  getInvoke();
   return (
     // <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
 <div className="bg-red-500 py-6 text-center dark:bg-primary">
@@ -44,9 +51,19 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <p className="text-center">This is a Remix app running in SPA mode and Tauri saying</p>
     </div>
+
   );
 }
+
+
+
+
+// export const loader: LoaderFunction = async () => {
+//   return json({ message: "Hello, World!" });
+// };
+
 
 // export const links: LinksFunction = () => {
   
