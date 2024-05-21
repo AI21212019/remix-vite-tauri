@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-     /* Linting */
+    /* Linting */
     "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -25,7 +25,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
-    },
+    }
 
     // Remix takes care of building everything in `remix build`.
   }

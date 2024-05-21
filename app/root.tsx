@@ -5,11 +5,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { MetaFunction} from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 
-import '@unocss/reset/normalize.css';
-import './uno.postcss';
-
+import "@unocss/reset/normalize.css";
+import "./uno.postcss";
 
 export const meta: MetaFunction = () => {
   return [
@@ -17,8 +16,6 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix (SPA Mode)!" },
   ];
 };
-
-
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

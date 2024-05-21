@@ -1,4 +1,4 @@
-import UnoCSS from '@unocss/vite';
+import UnoCSS from "@unocss/vite";
 // import React from '@vitejs/plugin-react'
 import { vitePlugin as remix } from "@remix-run/dev";
 // import { installGlobals } from "@remix-run/node";
@@ -8,7 +8,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // installGlobals();
 
-export default defineConfig(async () =>({
+export default defineConfig(async () => ({
   plugins: [
     // Inspect(),
     remix({
@@ -17,7 +17,6 @@ export default defineConfig(async () =>({
     tsconfigPaths(),
     UnoCSS({
       transformCSS: "post",
-
     }),
     // React(),
   ],
