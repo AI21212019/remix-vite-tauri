@@ -1,40 +1,13 @@
-
-// import { ClientOnly} from "remix-utils/client-only";
-import { useHydrated } from "remix-utils/use-hydrated";
-
-// import { BrokenOnTheServer } from "~/components/broken-on-the-server.client";
 import {invoke} from '@tauri-apps/api/core';
-// import type { ActionArgs, LinksFunction } from "@remix-run/node";
-// import { json } from "@remix-run/node";
-import { Await, useActionData } from "@remix-run/react";
+
+import { Await } from "@remix-run/react";
 import { ReactNode, Suspense } from "react";
 
 
 
-// const action = async ({ request }: ActionFunctionArgs) => {
-//   const formData = await request.formData();
-//   const { left_operand, operator, right_operand } =
-//     Object.fromEntries(formData);
-//   console.log(Object.fromEntries(formData));
-//   switch (operator) {
-//     case "+":
-//       const result = add(Number(left_operand), Number(right_operand));
-//       console.log("result", result);
-//       return json({
-//         result,
-//       });
-//     default:
-//       // Implement other operators
-//       return json({
-//         result: "🤷🏾",
-//       });
-//   }
-// };
-
-
 export default function Index() {
 
-const hydrated = useHydrated();
+
 
    const isDark = localStorage && localStorage.getItem('theme') === 'dark';
     applyTheme(isDark);
@@ -83,29 +56,3 @@ const hydrated = useHydrated();
 
   );
 }
-
-// && data.response as ReactNode
-
-
-// export const loader: LoaderFunction = async () => {
-//   return json({ message: "Hello, World!" });
-// };
-
-
-// export const links: LinksFunction = () => {
-  
-  //   return [
-  //     // {
-  //     //   rel: 'stylesheet',
-  //     //   href: 'uno.css',
-  //     // },
-  //     {
-  //       rel: 'stylesheet',
-  //       href: reset,
-  //     },
-  //   ]
-  // }
-
-  // import {json} from "@remix-run/node";
-// import type{ActionFunctionArgs} from "@remix-run/node";
-// import {useActionData} from '@remix-run/react';
