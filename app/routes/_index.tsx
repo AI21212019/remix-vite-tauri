@@ -59,6 +59,9 @@ const hydrated = useHydrated();
     <main className="py-16 px-4 max-w-screen-md mx-auto w-full">
 <div className="bg-yellow-800 py-6 text-center dark:bg-primary">
       <h1 className="color-white text-4xl font-sans">Welcome to Remix (SPA Mode)</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+      <Await resolve={getInvoke()} >{(value) => value as unknown as ReactNode}</Await>
+    </Suspense>
       <ul>
         <li>
           <a
@@ -75,18 +78,7 @@ const hydrated = useHydrated();
           </a>
         </li>
       </ul>
-      <p className="text-center color-white font-sans">This is a Remix app running in SPA mode and Tauri saying:</p>
     </div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Await resolve={getInvoke}>{(value) => value() as unknown as ReactNode}</Await>
-    </Suspense>
-      <button
-        type="button"
-        disabled={!hydrated}
-        onClick={() => alert("I has JS loaded!")}
-      >
-        Try me!
-      </button>
     </main>
 
   );
