@@ -10,13 +10,7 @@
   },
   "app": {
     "windows": [
-      {
-        "title": "remix-vite",
-        "width": 900,
-        "height": 900,
-        "resizable": true,
-        "fullscreen": false
-      }
+     
     ],
     "security": {
       "csp": null
