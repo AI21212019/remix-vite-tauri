@@ -8,6 +8,7 @@
     "event:default",
     "window:default",
     "window:allow-start-dragging",
+    "window:allow-create",
     "webview:default",
     "app:default",
     "resources:default",

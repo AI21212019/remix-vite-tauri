@@ -9,9 +9,6 @@
     "beforeBuildCommand": "bun build"
   },
   "app": {
-    "windows": [
-     
-    ],
     "security": {
       "csp": null
     }
