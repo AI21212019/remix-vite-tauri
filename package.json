@@ -19,10 +19,12 @@
     "@remix-run/serve": "^2.9.2",
     "isbot": "4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "remix-utils": "^7.6.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.9.2",
+    "@remix-run/eslint-config": "^2.9.2",
     "@tauri-apps/api": "^2.0.0-beta.11",
     "@tauri-apps/cli": "^2.0.0-beta.17",
     "@types/react": "^18.3.2",
@@ -30,7 +32,6 @@
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
     "@unocss/postcss": "^0.60.3",
-    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^9.3.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
@@ -40,6 +41,7 @@
     "typescript": "^5.4.5",
     "unocss": "^0.60.3",
     "vite": "^5.2.11",
+    "vite-plugin-inspect": "^0.8.4",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "engines": {

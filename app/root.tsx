@@ -5,11 +5,18 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import type { MetaFunction} from "@remix-run/node";
 
 import '@unocss/reset/normalize.css';
 import './uno.postcss';
 
 
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Remix SPA and Tauri" },
+    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+  ];
+};
 
 
 
