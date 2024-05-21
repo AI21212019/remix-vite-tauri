@@ -1,5 +1,4 @@
 import {invoke} from '@tauri-apps/api/core';
-
 import { Await } from "@remix-run/react";
 import { ReactNode, Suspense } from "react";
 
