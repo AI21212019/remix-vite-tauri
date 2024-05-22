@@ -14,10 +14,9 @@ export default defineConfig(async () => ({
     remix({
       basename: "/", // set this to the base path of your app
       buildDirectory: "build", // set this to the directory you want to build the app to
-      future: {
-      },
+      future: {},
       ignoredRouteFiles: ["**/*.css"],
-      
+
       ssr: false,
     }),
     tsconfigPaths(),
