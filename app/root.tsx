@@ -7,8 +7,10 @@ import {
 } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
-import "@unocss/reset/normalize.css";
+// import "@unocss/reset/normalize.css";
 import "./uno.postcss";
+// import "@unocss/reset"
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -24,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
-        <Links />
+        <Links /><title>Remix-Tauri</title>
       </head>
       <body>
         {children}

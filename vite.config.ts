@@ -1,12 +1,8 @@
 import UnoCSS from "@unocss/vite";
-// import React from '@vitejs/plugin-react'
 import { vitePlugin as remix } from "@remix-run/dev";
-// import { installGlobals } from "@remix-run/node";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-// import Inspect from 'vite-plugin-inspect';
 
-// installGlobals();
 
 export default defineConfig(async () => ({
   plugins: [
@@ -32,7 +28,6 @@ export default defineConfig(async () => ({
   server: {
     noExternal: ["remix-utils"],
     port: 5173,
-    strictPort: true,
     watch: {
       // 3. tell vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],

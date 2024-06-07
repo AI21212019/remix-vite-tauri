@@ -1,11 +1,11 @@
 {
-  "include": ["env.d.ts", "**/*.ts", "**/*.tsx", "src"],
+  "include": ["env.d.ts", "**/*.ts", "**/*.tsx", "src", "eslint.config.js"],
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "esModuleInterop": true,
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "jsx": "react-jsx",
     "types": ["@remix-run/node", "vite/client"],
     /* Bundler mode */
