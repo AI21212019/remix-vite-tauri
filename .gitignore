@@ -9,6 +9,8 @@
 **/bun.lockb*
 **/yarn.lock*
 **/package-lock.json*
+**/**.lock*
 
 /src-tauri/target*
 **/target*
+**/Cargo.lock*
