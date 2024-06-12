@@ -7,8 +7,10 @@ import {
 } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
-// import "@unocss/reset/normalize.css";
+import "@unocss/reset/normalize.css";
 import "./uno.postcss";
+import "virtual:uno.css"
+import React from "react";
 // import "@unocss/reset"
 
 
